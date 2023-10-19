@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Cheat-Sheet for CSS</title>
+</head>
+<body>
+    <h1>Cheat-Sheet for CSS</h1>
+    <hr>
+
+    <h3>The most important things explained with an example:</h3>
+
+    <p>
+        /* This is a CSS comment. It won't affect the styling. */<br>
+        <br>
+        /* Select the h1 element and make the text red and centered. */<br>
+        h1 {<br>
+        color: red;        /* Text color is red */<br>
+        text-align: center; /* Text is centered */<br>
+        }<br>
+        <br>
+        /* Select all elements with class "highlight" and make the background yellow. */<br>
+        .highlight {<br>
+        background-color: yellow; /* Background is yellow */<br>
+        }<br>
+        <br>
+        /* Select all elements within the element with ID "container" and add a border. */<br>
+            #container p {<br>
+            border: 1px solid black; /* 1-pixel solid black border */<br>
+            }<br>
+            <br>
+            /* Select all elements with class "button" and style them as buttons. */<br>
+            .button {<br>
+            background-color: blue; /* Blue background */<br>
+            color: white;           /* White text color */<br>
+            padding: 10px 20px;     /* Padding around the text */<br>
+            border: none;           /* No border */<br>
+            cursor: pointer;        /* Cursor style changes to a pointer on hover */<br>
+            }<br>
+        </p>
+
+        <h3>This explains everything you need for a stylesheet</h3>
+
+        <p>
+            Comments are included using /* ... */.<br>
+            CSS selectors (e.g., h1, .highlight, #container p) target specific HTML elements based on their tag name, class, or ID.<br>
+            Properties (e.g., color, background-color) are used to define the styling of the selected elements.<br>
+            Values (e.g., red, center) are the settings for the CSS properties.<br>
+            The ; at the end of each property-value pair separates different styles.<br>
+            The stylesheet can be included in an HTML document using a &lt;link> element in the document's &lt;head> section.<br>
+        </p>
+</body>
+</html>

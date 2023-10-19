@@ -1,0 +1,57 @@
+* {
+    background: black;
+    font-family: Bahnschrift, "Arial Black", sans-serif;
+    font-size: large;
+    color: white;
+}
+
+h1 {
+    font-size: xxx-large;
+    color: whitesmoke;
+    text-shadow: 10px 10px 10px mediumpurple;
+}
+
+h2 {
+    font-size: xx-large;
+    color: darkslateblue;
+}
+
+h3 {
+    font-size: x-large;
+    color: purple;
+}
+
+button {
+    font-size: 30px;
+}
+
+.rainbow-border {
+    width: 10px;
+    height: 5px;
+    border: 100px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(45deg, blueviolet, darkslateblue, darkblue, blue, skyblue, lightskyblue, blue) 1;
+    border-image-slice: 1;
+    animation: rainbow-border-animation 1s linear infinite;
+    border-radius: 50%;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+}
+
+@keyframes rainbow-border-animation {
+    0% {
+        border-image-source: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #33ff33, #0066ff, #9900cc, #ff0099);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, #ff0099, #9900cc, #0066ff, #33ff33, #ffff00, #ff9900, #ff0000);
+    }
+}
