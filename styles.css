@@ -25,18 +25,6 @@ button {
     font-size: 30px;
 }
 
-.rainbow-border {
-    width: 10px;
-    height: 5px;
-    border: 100px solid transparent;
-    background-clip: padding-box;
-    border-image: linear-gradient(45deg, blueviolet, darkslateblue, darkblue, blue, skyblue, lightskyblue, blue) 1;
-    border-image-slice: 1;
-    animation: rainbow-border-animation 1s linear infinite;
-    border-radius: 50%;
-    position: relative;
-}
-
 .content {
     width: 100%;
     height: 100%;
@@ -47,11 +35,16 @@ button {
     border-radius: 50%;
 }
 
-@keyframes rainbow-border-animation {
-    0% {
-        border-image-source: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #33ff33, #0066ff, #9900cc, #ff0099);
-    }
-    100% {
-        border-image-source: linear-gradient(45deg, #ff0099, #9900cc, #0066ff, #33ff33, #ffff00, #ff9900, #ff0000);
-    }
+@keyframes blink {
+    0% { color: deepskyblue; }
+    25% { color: lightseagreen; }
+    50% { color: mediumspringgreen; }
+    75% { color: lightseagreen; }
+    100% { color: deepskyblue; }
+}
+
+.blink-text {
+    font-size: 100px;
+    animation: blink 10s infinite;
+    font-weight: bolder;
 }
