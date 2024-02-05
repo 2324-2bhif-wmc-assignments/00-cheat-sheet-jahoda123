@@ -1,50 +1,196 @@
-* {
-    background: black;
-    font-family: Bahnschrift, "Arial Black", sans-serif;
-    font-size: large;
-    color: white;
+/* Dark-themed palette */
+:root {
+    --primary-color: #8e44ad; /* Purple */
+    --secondary-color: #2c3e50; /* Dark blue-gray */
+    --text-color: #ecf0f1; /* Light gray */
+    --hovered-color: #9b59b6; /* Hovered Purple */
+    --hovered-color-p: #8e698e;
 }
 
-h1 {
-    font-size: xxx-large;
-    color: whitesmoke;
-    text-shadow: 10px 10px 10px mediumpurple;
+/* General styles */
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-h2 {
-    font-size: xx-large;
-    color: darkslateblue;
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-h3 {
-    font-size: x-large;
-    color: purple;
+/* Header styles */
+header.menu {
+    background: linear-gradient(to left, #8e44ad, #2c3e50, #8e44ad);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+header.menu h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
 }
 
 button {
-    font-size: 30px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
-.content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+button:hover {
+    background-color: var(--hovered-color); /* Changed purple for hover */
+    color: #ffffff; /* White */
+    transform: scale(1.20);
+    box-shadow: black;
+}
+
+button.home {
+    background-color: black;
+    color: white;
+}
+
+button.home:hover {
     background-color: white;
+    color: black;
+}
+
+/* Section headers */
+h2,
+h3,
+p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    transition: transform 0.3s, color 0.3s;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+h2:hover {
+    color: var(--hovered-color); /* Changed purple for hover */
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+h3:hover {
+    color: var(--hovered-color); /* Changed purple for hover */
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+p:hover {
+    color: var(--hovered-color-p); /* Changed purple for hover */
+}
+
+/* Define the styles for the loader */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20% auto;
 }
 
-@keyframes blink {
-    0% { color: deepskyblue; }
-    25% { color: lightseagreen; }
-    50% { color: mediumspringgreen; }
-    75% { color: lightseagreen; }
-    100% { color: deepskyblue; }
+/* Define the animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.blink-text {
-    font-size: 100px;
-    animation: blink 10s infinite;
-    font-weight: bolder;
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2a2348;
+    z-index: 999; /* Ensure it appears above other content */
+    padding: 10px;
+}
+
+.jahoda {
+    color: var(--text-color);
+    font-size: 20em;
+    text-align: center;
+    padding-top: 0.535em;
+    font-family: "Arial Black", serif;
+    animation: jahodaColorChange 10s infinite;
+}
+
+.jahoda span:hover {
+    color: var(--primary-color);
+    text-shadow: 1rem 1rem 1rem var(--text-color);
+}
+
+@keyframes jahodaColorChange {
+    0% { color: var(--text-color); }
+    50% { color: var(--primary-color); }
+    100% { color: var(--text-color); }
+}
+
+div.code-box p {
+    color: white;
+    padding: 1rem;
+    font-family: Bahnschrift, serif;
+    font-size: 1rem;
+}
+
+div.code-box {
+    background-color: black;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+p a {
+    color: black;
+    text-decoration: none;
+}
+
+.box-model {
+    width: 50rem;
+    float: right;
+}
+
+img.home-button {
+    width: 0.7rem;
+    border-radius: 1000000%;
 }

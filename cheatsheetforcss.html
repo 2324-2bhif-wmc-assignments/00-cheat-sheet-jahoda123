@@ -7,49 +7,568 @@
     <title>Cheat-Sheet for CSS</title>
 </head>
 <body>
+
+    <div class="menu-container">
+        <nav>
+            <ul>
+                <li><button class="home" onclick="window.location.href = 'cheatsheet.html'"><img class="home-button" src="yamaha.jpg" alt="Homepage"></button></li>
+                <li><button onclick="window.location.href = '#floating-elements'">Floating Elements</button></li>
+                <li><button onclick="window.location.href = '#box-model'">Box Model</button></li>
+                <li><button onclick="window.location.href = '#lists'">Lists</button></li>
+                <li><button onclick="window.location.href = '#tables'">Tables</button></li>
+                <li><button onclick="window.location.href = '#pseudo-classes'">Pseudo-Classes</button></li>
+                <li><button onclick="window.location.href = '#combinators'">Combinators</button></li>
+                <li><button onclick="window.location.href = '#links'">Links</button></li>
+                <li><button onclick="window.location.href = '#fonts'">Fonts</button></li>
+                <li><button onclick="window.location.href = '#text'">Text</button></li>
+                <li><button onclick="window.location.href = '#background'">Background</button></li>
+                <li><button onclick="window.location.href = '#colors'">Colors</button></li>
+                <li><button onclick="window.location.href = '#comments'">Comments</button></li>
+                <li><button onclick="window.location.href = '#rules'">Rules</button></li>
+            </ul>
+        </nav>
+    </div>
+
     <h1>Cheat-Sheet for CSS</h1>
     <hr>
 
-    <h3>The most important things explained with an example:</h3>
+    <h2 id="rules">CSS Rules</h2>
 
-    <p>
-        /* This is a CSS comment. It won't affect the styling. */<br>
-        <br>
-        /* Select the h1 element and make the text red and centered. */<br>
-        h1 {<br>
-        color: red;        /* Text color is red */<br>
-        text-align: center; /* Text is centered */<br>
-        }<br>
-        <br>
-        /* Select all elements with class "highlight" and make the background yellow. */<br>
-        .highlight {<br>
-        background-color: yellow; /* Background is yellow */<br>
-        }<br>
-        <br>
-        /* Select all elements within the element with ID "container" and add a border. */<br>
-            #container p {<br>
-            border: 1px solid black; /* 1-pixel solid black border */<br>
+    <p>A rule has a selector and a declaration block. Selectors are used to select the element. In the declaration block comes the design changes.</p>
+
+    <p>There are 5 different selector types:</p>
+
+    <ul>
+        <li>Simple-selectors</li>
+        <li>Combinator-selectors</li>
+        <li>Pseudo-class selectors </li>
+        <li>Pseudo-elements selectors </li>
+        <li>Attribute-selectors</li>
+    </ul>
+
+    <p>When you want to change the style of some things to the same you can do this like this:</p>
+
+    <div class="code-box">
+        <p>
+            h2, h3, h4 {<br>
+            color:black;<br>
+            }<br>
+        </p>
+    </div>
+
+    <h2 id="comments">Comments</h2>
+
+    <p>Comments in css are started with /* and end with */. They are only visible to the programmer in the css file.</p>
+
+    <div class="code-box">
+        <p>
+            /*This is a css comment.*/
+        </p>
+    </div>
+
+    <h2 id="colors">Colors</h2>
+
+    <h3>Color using names</h3>
+
+    <p>CSS allows specifying colors using predefined names. CSS/HTML support 140 standard color names.</p>
+
+    <div class="code-box">
+        <p>
+            color: red;
+        </p>
+    </div>
+
+    <h3>Color using HEX-Values</h3>
+
+    <p>Hexadecimal color is specified with #RRGGBB.
+        RR (red), GG (green), and BB (blue) are hexadecimal values between 00 and ff (equivalent to decimal 0-255).
+        Example: #ff0000 represents red (maximum red, no green or blue).
+        #000000 is black, and #ffffff is white.</p>
+
+    <div class="code-box">
+        <p>
+            color: #ffffff;
+        </p>
+    </div>
+
+    <h3>Color using 3 digit HEX</h3>
+
+    <p>A shorthand for some 6-digit hex codes.
+        Takes the form #rgb, where r, g, and b represent red, green, and blue components.
+        The 3-digit code can only be used when RR, GG, and BB values are the same.
+        Example: #ff00cc can be written as #f0c.</p>
+
+    <div class="code-box">
+        <p>
+            color: #f00;
+        </p>
+    </div>
+
+    <h2 id="background">Background</h2>
+
+    <h3>Background Colors</h3>
+
+    <p>Specifies the background color of an element.<br>
+        Color can be defined using:<br>
+        Valid color name (e.g., "red").<br>
+        HEX value (e.g., "#ff0000").<br>
+        RGB value (e.g., "rgb(255,0,0)")</p>
+
+    <div class="code-box">
+        <p>
+            background: red;
+        </p>
+    </div>
+
+    <h3>Background Images</h3>
+
+    <p>Specifies an image to use as the background of an element.
+        Default behavior repeats the image to cover the entire element.
+        Can be set for specific elements, such as &lt;p>.</p>
+
+    <div class="code-box">
+        <p>
+            background: image.jpg;
+        </p>
+    </div>
+
+    <h2 id="text">Text</h2>
+
+    <h3>Color</h3>
+
+    <p>The 'color' property sets the color of the text.<br>
+        Color specified by:<br>
+        Color name (e.g., "red").<br>
+        HEX value (e.g., "#ff0000").<br>
+        RGB value (e.g., "rgb(255,0,0)").<br>
+        Default text color for a page is defined in the body selector.</p>
+
+    <div class="code-box">
+        <p>
+            /* Setting text color using color name */<br>
+            body {<br>
+            color: red;<br>
             }<br>
             <br>
-            /* Select all elements with class "button" and style them as buttons. */<br>
-            .button {<br>
-            background-color: blue; /* Blue background */<br>
-            color: white;           /* White text color */<br>
-            padding: 10px 20px;     /* Padding around the text */<br>
-            border: none;           /* No border */<br>
-            cursor: pointer;        /* Cursor style changes to a pointer on hover */<br>
+            /* Setting text color using HEX value */<br>
+            h1 {<br>
+            color: #00ff00; /* Green */<br>
+            }<br>
+            <br>
+            /* Setting text color using RGB value */<br>
+            p {<br>
+            color: rgb(0, 0, 255); /* Blue */<br>
             }<br>
         </p>
+    </div>
 
-        <h3>This explains everything you need for a stylesheet</h3>
+    <h3>Alignment</h3>
 
+    <p>'text-align' property sets horizontal alignment.<br>
+        Options: left, right, center, justify.<br>
+        'text-align-last' aligns the last line of text.<br>
+        'direction' and 'unicode-bidi' properties change text direction.<br>
+        'vertical-align' sets vertical alignment.</p>
+
+    <div class="code-box">
         <p>
-            Comments are included using /* ... */.<br>
-            CSS selectors (e.g., h1, .highlight, #container p) target specific HTML elements based on their tag name, class, or ID.<br>
-            Properties (e.g., color, background-color) are used to define the styling of the selected elements.<br>
-            Values (e.g., red, center) are the settings for the CSS properties.<br>
-            The ; at the end of each property-value pair separates different styles.<br>
-            The stylesheet can be included in an HTML document using a &lt;link> element in the document's &lt;head> section.<br>
+            /* Aligning text to the center */<br>
+            h2 {<br>
+            text-align: center;<br>
+            }<br>
+            <br>
+            /* Justifying text */<br>
+            p {<br>
+            text-align: justify;<br>
+            }<br>
+            <br>
+            /* Aligning the last line to the right */<br>
+            p {<br>
+            text-align-last: right;<br>
+            }<br>
+            <br>
+            /* Changing text direction to right-to-left */<br>
+            div {<br>
+            direction: rtl;<br>
+            }<br>
         </p>
+    </div>
+
+    <h3>Decoration</h3>
+
+    <p>'text-decoration-line' adds decoration lines to text.<br>
+        Multiple values can be combined (e.g., overline and underline).<br>
+        'text-decoration-color' sets line color.<br>
+        'text-decoration-style' sets line style.<br>
+        'text-decoration-thickness' sets line thickness.<br>
+        'text-decoration: none;' removes underline from links.</p>
+
+    <div class="code-box">
+        <p>
+            /* Adding an underline to text */<br>
+            a {<br>
+            text-decoration-line: underline;<br>
+            }<br>
+            <br>
+            /* Combining overline and underline */<br>
+            h3 {<br>
+            text-decoration-line: overline underline;<br>
+            }<br>
+            <br>
+            /* Setting the color of the decoration line */<br>
+            p {<br>
+            text-decoration-color: #ff4500; /* Orange-Red */<br>
+            }<br>
+            <br>
+            /* Removing underline from links */<br>
+            a {<br>
+            text-decoration: none;<br>
+            }<br>
+        </p>
+    </div>
+
+    <h3>Transformation</h3>
+
+    <p>'text-transform' specifies uppercase, lowercase, or capitalize.<br>
+        Options: uppercase, lowercase, capitalize.</p>
+
+    <div class="code-box">
+        <p>
+            /* Transforming text to uppercase */<br>
+            h4 {<br>
+            text-transform: uppercase;<br>
+            }<br>
+            <br>
+            /* Transforming text to lowercase */<br>
+            span {<br>
+            text-transform: lowercase;<br>
+            }<br>
+            <br>
+            /* Capitalizing the first letter of each word */<br>
+            h5 {<br>
+            text-transform: capitalize;<br>
+            }<br>
+        </p>
+    </div>
+
+    <h2 id="fonts">Fonts</h2>
+
+    <h3>Font Family</h3>
+
+    <p>Use the 'font-family' property in CSS to specify the font of text.<br>
+        If the font name has more than one word, enclose it in quotation marks (e.g., "Times New Roman").<br>
+        Include multiple font names as a fallback system for compatibility.</p>
+
+    <div class="code-box">
+        <p>
+            font-family: "Arial", "Helvetica", sans-serif;
+        </p>
+    </div>
+
+    <h3>Font Style</h3>
+
+    <p>
+        'font-style' is used for italic text.<br>
+        Values:<br>
+        normal: Text is shown normally.<br>
+        italic: Text is shown in italics.<br>
+        oblique: Text is "leaning" (similar to italic, but less supported).<br>
+        'font-weight' specifies font thickness.<br>
+        'font-variant' determines if text should be displayed in small-caps.<br>
+    </p>
+
+    <h3>Font Size</h3>
+
+    <p>
+        'font-size' sets the size of text.<br>
+        Use proper HTML tags for structure (e.g., &lt;h1> for headings, &lt;p> for paragraphs).<br>
+        Size can be absolute (specified size) or relative (relative to surrounding elements).
+    </p>
+
+    <div class="code-box">
+        <p>
+            h2 {<br>
+            font-size: 10px; /* Absolute size in pixels */<br>
+            }<br>
+            <br>
+            p {<br>
+            font-size: 1.5rem; /* Relative size in rem units */<br>
+            }<br>
+
+        </p>
+    </div>
+
+    <h3>Font Weight</h3>
+
+    <p>'font-weight' sets how thick or thin characters in text should be displayed. Values range from 100 (thin) to 900 (bold).</p>
+
+    <div class="code-box">
+        <p>
+            p {
+            font-weight: 900;
+            }
+            /* or */
+            p {
+            font-weight: 100;
+            }
+        </p>
+    </div>
+
+    <h2 id="links">Links</h2>
+
+    <p>
+        a:link    -> regular links
+        a:visited -> links that you already clicked on
+        a:hover   -> links that you hover with the mouse
+        a:active  -> links the moment you click them
+    </p>
+
+    <div class="code-box">
+        <p>
+            /* Normal, Unvisited Link */<br>
+            a:link {<br>
+            color: #1e90ff; /* Dodger Blue */<br>
+            text-decoration: underline; /* Underline the link */<br>
+            }<br>
+            <br>
+            /* Visited Link */<br>
+            a:visited {<br>
+            color: #800080; /* Purple */<br>
+            }<br>
+            <br>
+            /* Link on Mouse Over */<br>
+            a:hover {<br>
+            color: #ff4500; /* Orange-Red */<br>
+            font-weight: bold; /* Bold text on hover */<br>
+            }<br>
+            <br>
+            /* Link on Click */<br>
+            a:active {<br>
+            color: #008000; /* Green */<br>
+            }<br>
+        </p>
+    </div>
+
+    <h2 id="combinators">Combinators</h2>
+
+    <h3>Descendant Selector (Space)</h3>
+
+    <div class="code-box">
+        <p>
+            div p {<br>
+            /* Selects all &lt;p> elements inside a &lt;div> */<br>
+            color: blue;<br>
+            }<br>
+        </p>
+    </div>
+
+    <p>Matches all elements that are descendants of a specified element.</p>
+
+    <h3>Child Selector (>)</h3>
+
+    <p>Selects all elements that are children of a specified element.</p>
+
+    <div class="code-box">
+        <p>
+            ul > li {<br>
+            /* Selects all &lt;li> elements that are direct children of a &lt;ul> */<br>
+            list-style-type: square;<br>
+            }<br>
+        </p>
+    </div>
+
+    <h3>Adjacent Sibling Selector (+)</h3>
+
+    <p>Selects an element that is directly after another specific element. Sibling elements must have the same parent, and "adjacent" means "immediately following."</p>
+
+    <div class="code-box">
+        <p>
+            h2 + p {<br>
+            /* Selects the &lt;p> element immediately following an &lt;h2> */<br>
+            font-style: italic;<br>
+            }<br>
+        </p>
+    </div>
+
+    <h3>General Sibling Selector (~)</h3>
+
+    <p>Selects all elements that are next siblings of a specified element.</p>
+
+    <div class="code-box">
+        <p>
+            h3 ~ p {<br>
+            /* Selects all &lt;p> elements that are siblings following an &lt;h3> */<br>
+            color: green;<br>
+            }<br>
+        </p>
+    </div>
+
+    <h2 id="pseudo-classes">Pseudo Classes</h2>
+
+    <p>A pseudo-class is used to define a special state of an element. It can be used for various purposes, such as styling an element when a user interacts with it.</p>
+
+    <div class="code-box">
+        <p>
+            selector:pseudo-class {<br>
+            property: value;<br>
+            }<br>
+        </p>
+    </div>
+
+    <h2 id="tables">Tables</h2>
+
+    <p>Black Dotted Border (1px width):</p>
+
+    <div class="code-box">
+        <p>
+            table {<br>
+            border: 1px dotted black;<br>
+            }<br>
+        </p>
+    </div>
+
+    <p>Solid Border (1px width, Red Color, Rounded Corners - 5px Radius):</p>
+
+    <div class="code-box">
+        <p>
+            table {<br>
+            border: 1px solid red;<br>
+            border-radius: 5px;<br>
+            }<br>
+        </p>
+    </div>
+
+    <p>Merge Table Cell Borders (appear as one line):</p>
+
+    <div class="code-box">
+        <p>
+            table {<br>
+            border-collapse: collapse;<br>
+            }<br>
+        </p>
+    </div>
+
+    <h2 id="lists">Lists</h2>
+
+    <p>Bullet as a square:</p>
+
+    <div class="code-box">
+        <p>
+            ul {<br>
+            list-style-type: square;<br>
+            }<br>
+        </p>
+    </div>
+
+    <p>Bullet as an image:</p>
+
+    <div class="code-box">
+        <p>
+            ul {<br>
+            list-style-image: url("my-bullet.png");<br>
+            }<br>
+        </p>
+    </div>
+
+    <p>Bullet as an uppercase roman number:</p>
+
+    <div class="code-box">
+        <p>
+            ol {<br>
+            list-style-type: upper-roman;<br>
+            }<br>
+        </p>
+    </div>
+
+    <p>Bullet Position Inside List Item's Text Flow:</p>
+
+    <div class="code-box">
+        <p>
+            li {<br>
+            list-style-position: inside;<br>
+            }<br>
+        </p>
+    </div>
+
+    <p>Bullet Position Outside List Item's Text Flow:</p>
+
+    <div class="code-box">
+        <p>
+            li {<br>
+            list-style-position: outside;<br>
+            }<br>
+        </p>
+    </div>
+
+    <h2 id="box-model">Box-Model</h2>
+
+    <img class="box-model" src="CSS-Box-Model.webp" alt="box-model">
+
+    <h3>Block Elements</h3>
+
+    <p>Block elements take up the full width available and start on a new line. Examples of block elements include:</p>
+    <ul>
+        <li>article</li>
+        <li>section</li>
+        <li>p</li>
+        <li>h1 - h6</li>
+        <li>div</li>
+    </ul>
+
+    <div class="code-box">
+        <p>
+            div {<br>
+            width: 300px;<br>
+            margin: 10px;<br>
+            padding: 20px;<br>
+            border: 1px solid #000;<br>
+            }<br>
+        </p>
+    </div>
+
+    <h3>Inline Elements</h3>
+
+    <p>Inline elements, on the other hand, do not start on a new line and only take up as much width as necessary. Examples of inline elements include:</p>
+    <ul>
+        <li>img</li>
+        <li>strong</li>
+        <li>em</li>
+        <li>span</li>
+    </ul>
+
+    <div class="code-box">
+        <p>
+            /* Example styling for inline elements */<br>
+            span {<br>
+            color: red;<br>
+            text-decoration: underline;<br>
+            }<br>
+        </p>
+    </div>
+
+    <h2 id="floating-elements">Floating Elements</h2>
+
+    <p>In CSS, floating elements is a technique used to remove elements from the normal flow of the document and position them to the left or right of their containing element. This is often used to create layouts where elements appear side by side.</p>
+
+    <div class="code-box">
+        <p>
+            /* Floating an element to the left */<br>
+            .float-left {<br>
+            float: left;<br>
+            }<br>
+            <br>
+            /* Floating an element to the right */<br>
+            .float-right {<br>
+            float: right;<br>
+            }<br>
+            <br>
+            /* Clearing floats */<br>
+            .clearfix::after {<br>
+            content: "";<br>
+            display: table;<br>
+            clear: both;<br>
+            }<br>
+        </p>
+    </div>
 </body>
 </html>

@@ -7,48 +7,375 @@
     <title>Cheat-Sheet for HTML</title>
 </head>
 <body>
+
+    <div class="menu-container">
+    <nav>
+        <ul>
+            <li><button class="home" onclick="window.location.href = 'cheatsheet.html'"><img class="home-button" src="yamaha.jpg" alt="Homepage"></button></li>
+            <li><button onclick="window.location.href = '#structure'">Structure</button></li>
+            <li><button onclick="window.location.href = '#elements'">Elements</button></li>
+            <li><button onclick="window.location.href = '#attributes'">Attributes</button></li>
+            <li><button onclick="window.location.href = '#comments'">Comments</button></li>
+            <li><button onclick="window.location.href = '#images'">Images</button></li>
+            <li><button onclick="window.location.href = '#head-elements'">Head Elements</button></li>
+            <li><button onclick="window.location.href = '#lists-and-tables'">Lists and Tables</button></li>
+        </ul>
+    </nav>
+    </div>
+
     <h1>Cheat-Sheet for HTML</h1>
     <hr>
 
-    <h3>This is an example for html code</h3>
+    <h1>Basics</h1>
+
+    <h2 id="structure">Structure</h2>
+
+    <div class="code-box">
+        <p>
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html lang="en"&gt;<br>
+            &lt;head&gt;<br>
+                &lt;meta charset="UTF-8"&gt;<br>
+                &lt;link rel="stylesheet" href="./styles.css"&gt;<br>
+                &lt;title&gt;Cheat-Sheet for HTML&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+            &lt;body&gt;<br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;<br>
+        </p>
+    </div>
+
+    <p>This provides the basic structure for an HTML document. It includes the document type declaration, specifies the language, links an external stylesheet, sets the character encoding, and establishes the basic structure with head and body sections.</p>
+
+    <h2 id="elements">Elements</h2>
+
+    <p>An element starts at the start tag (&lt;start>) and goes till the ent tag (&lt;end>)</p>
+
+    <h3>Heading Elements</h3>
+
+    <p>Heading elements range from &lt;h1> (most important) to &lt;h6> (least important). They define the headings and subheadings of a document.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;h1>Main Heading&lt;/h1><br>
+            &lt;h2>Subheading&lt;/h2><br>
+            &lt;h3>Sub-subheading&lt;/h3><br>
+            &lt;!-- ...and so on --><br>
+        </p>
+    </div>
+
+    <p>Headings are essential for structuring content and are also used by search engines to understand the hierarchy and relevance of information on a web page.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;h1>This is the main heading&lt;/h1><br>
+            &lt;p>This is some text under the main heading.&lt;/p><br>
+            &lt;h2>This is a subheading&lt;/h2><br>
+            &lt;p>More text under the subheading.&lt;/p><br>
+        </p>
+    </div>
+
+    <h3>Paragraphs</h3>
+
+    <p>In a paragraph you can write anything you want. This is a paragraph.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;p>This is how you write a paragraph&lt;p>
+        </p>
+    </div>
+
+    <h3>Links</h3>
 
     <p>
-        &lt;!DOCTYPE html><br>
-        &lt;html><br>
-        &lt;head><br>
-        &lt;title>My HTML Page&lt;/title><br>
-        &lt;/head><br>
-        &lt;body><br>
-        &lt;h1>Welcome to My Page&lt;/h1><br>
-        &lt;p>This is a simple HTML page.&lt;/p><br>
-        <br>
-        &lt;!-- This is a comment. It won't be displayed in the browser. --><br>
-        <br>
-        &lt;ul><br>
-        &lt;li>Item 1&lt;/li><br>
-        &lt;li>Item 2&lt;/li><br>
-        &lt;/ul><br>
-        <br>
-        &lt;a href="https://www.example.com">Visit Example.com&lt;/a><br>
-        &lt;/body><br>
-        &lt;/html><br>
+        HTML links are created using the &lt;a> tag. To open a page, use the href <a href="#attributes">attributes</a> with the value "website.at" or with an id you can go to a specific place on the webpage. The text between the tags is what the link will say.
     </p>
 
-    <h3>This explains everything:</h3>
+    <div class="code-box">
+        <p>
+            &lt;a href="#">With the id # you go to the top of the page.&lt;/a>
+        </p>
+    </div>
+
+    <h3>Void Elements</h3>
+
+    <p>
+        Void Elements are empty, like the &lt;br> element, which is used like an enter.
+    </p>
+
+    <h3>Nested Elements</h3>
+
+    <p>
+        You can also put elements in different elements. Those are called nested elements.
+    </p>
+
+    <div class="code-box">
+        <p>
+            &lt;div class="outer-container"&gt;<br>
+                &lt;h1&gt;Main Heading&lt;/h1&gt;<br>
+                &lt;p&gt;This is a paragraph within the outer container.&lt;/p&gt;<br>
+                &lt;div class="inner-container"&gt;<br>
+                    &lt;h2&gt;Subheading&lt;/h2&gt;<br>
+                    &lt;p&gt;This paragraph is nested inside the inner container.&lt;/p&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;p&gt;Another paragraph within the outer container.&lt;/p&gt;<br>
+            &lt;/div&gt;<br>
+        </p>
+    </div>
+
+    <h2 id="attributes">Attributes</h2>
+
+    <p>HTML attributes provide extra information about HTML elements, influencing their behavior or appearance. They're added to element tags and typically follow a name-value format.</p>
+
+    <p>Those are the most common attributes:</p>
+    <ol>
+        <li>src: Specifies the source (e.g., for images or scripts).</li>
+        <li>href: Defines the hyperlink destination.</li>
+        <li>alt: Describes alternative text for images.</li>
+        <li>class: Assigns a class for styling with CSS.</li>
+        <li>id: Provides a unique identifier for an element.</li>
+    </ol>
+
+    <h2 id="comments">Comments</h2>
+
+    <p>HTML comments are used to include notes or remarks within the HTML code that are not displayed in the browser. They are meant for developers and serve as a way to document the code or temporarily disable specific parts without affecting the page's appearance.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;!-- This is an HTML comment -->
+        </p>
+    </div>
+
+    <h2 id="images">Images</h2>
+
+    <p>Images are very important to improve how your website looks.</p>
+
+    <p>For an image you need the tag &lt;img>. There are 2 attributes you have to add. Src and alt. Src is used for the link of the image, alt is for the text which will be displayed if the picture is not available.</p>
+
+    <h3>SRC Image Link</h3>
+
+    <p>Absolute Paths look like this:</p>
+
+    <div class="code-box">
+        <p>
+            &lt;img src="/images/image.jpg" alt="Description">
+        </p>
+    </div>
+
+    <p>Relative Paths look like this:</p>
+
+    <div class="code-box">
+        <p>
+            &lt;img src="../images/image.jpg" alt="Description">
+        </p>
+    </div>
+
+    <p>Links to external Webpages look like this:</p>
+
+    <div class="code-box">
+        <p>
+            &lt;img src="https://example.com/image.jpg" alt="Description">
+        </p>
+    </div>
+
+    <h2 id="head-elements">Head Elements</h2>
+
+    <p>In HTML, the &lt;head> element contains meta-information about the HTML document, which is not displayed on the web page itself. Here are some common head elements, including the &lt;meta> element.</p>
+
+    <h3>&lt;title></h3>
+
+    <p>Specifies the title of the HTML document, displayed in the browser's title bar or tab.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;title>Page Title&lt;/title>
+        </p>
+    </div>
+
+    <h3>&lt;meta></h3>
+
+    <p>Defines the character set for the document. It is commonly set to UTF-8 to support a wide range of characters.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;meta charset="UTF-8">
+        </p>
+    </div>
+
+    <p>Configures the viewport settings, ensuring proper rendering on various devices.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </p>
+    </div>
+
+    <p>Provides a brief description of the HTML document for search engines and social media.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;meta name="description" content="Description of the page">
+        </p>
+    </div>
+
+    <h3>&lt;link></h3>
+
+    <p>Establishes various links, such as linking to stylesheets or external resources.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;link rel="stylesheet" href="styles.css">
+        </p>
+    </div>
+
+    <h3>&lt;style></h3>
+
+    <p>Contains inline CSS styles that apply to the document.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;style>
+            /* Your CSS styles here */
+            &lt;/style>
+        </p>
+    </div>
+
+    <h3>&lt;script></h3>
+
+    <p>Embeds or references JavaScript code.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;script src="script.js">&lt;/script>
+        </p>
+    </div>
+
+    <h2 id="lists-and-tables">Lists and Tables</h2>
+
+    <h3>Lists</h3>
+
+    <p>There are 2 types of lists. Ordered and Unordered Lists. The tags are ol and ul.</p>
+    <p>In a list there are list items. Tags for those are li.</p>
+
+    <ol>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+    </ol>
+
+    <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+    </ul>
+
+    <p>A description list in HTML is created using the &lt;dl>, &lt;dt>, and &lt;dd> elements. The description list is used to represent a list of terms and their corresponding descriptions.</p>
+
+    <dl>
+        <dt>Term 1</dt>
+        <dd>Description for Term 1</dd>
+        <dt>Term 2</dt>
+        <dd>Description for Term 2</dd>
+    </dl>
+
+    <p>The lists above this text are made like in the code-box.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;ol><br>
+            &lt;li>List Item&lt;/li><br>
+            &lt;li>List Item&lt;/li><br>
+            &lt;li>List Item&lt;/li><br>
+            &lt;/ol><br>
+            <br>
+            &lt;ul><br>
+            &lt;li>List Item&lt;/li><br>
+            &lt;li>List Item&lt;/li><br>
+            &lt;li>List Item&lt;/li><br>
+            &lt;/ul><br>
+            <br>
+            &lt;dl&gt;<br>
+            &lt;dt&gt;Term 1&lt;/dt&gt;<br>
+            &lt;dd&gt;Description for Term 1&lt;/dd&gt;<br>
+            &lt;dt&gt;Term 2&lt;/dt&gt;<br>
+            &lt;dd&gt;Description for Term 2&lt;/dd&gt;<br>
+            &lt;/dl&gt;<br>
+        </p>
+    </div>
+
+    <h3>Tables</h3>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Data 1,1</td>
+            <td>Data 1,2</td>
+        </tr>
+        <tr>
+            <td>Data 2,1</td>
+            <td>Data 2,2</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>Footer 1</td>
+            <td>Footer 2</td>
+        </tr>
+        </tfoot>
+    </table>
 
     <p>
         In this example:<br>
         <br>
-        &lt;!DOCTYPE html> is a declaration specifying the document type and version.<br>
-        &lt;html> is the root element, containing all the other elements.<br>
-        &lt;head> contains metadata about the page, like the title in &lt;title>.<br>
-        &lt;body> contains the visible content of the webpage.<br>
-        &lt;h1> is a top-level heading.<br>
-        &lt;p> is a paragraph.<br>
-        &lt;!-- ... --> is an HTML comment.<br>
-        &lt;ul> is an unordered list, containing list items &lt;li>.<br>
-        &lt;a> is an anchor (link) element with an href attribute pointing to a web address.<br>
-        This example showcases the basic structure of an HTML document with elements like headings, paragraphs, lists, comments, and hyperlinks.<br>
+        &lt;table>: Defines the start of the HTML table.<br>
+        &lt;thead>: Groups the header content.<br>
+        &lt;tr>: Represents a table row in the header.<br>
+        &lt;th>: Defines header cells.<br>
+        &lt;tbody>: Groups the body content.<br>
+        &lt;tr>: Represents a table row in the body.<br>
+        &lt;td>: Defines standard data cells.<br>
+        &lt;tfoot>: Groups the footer content.<br>
+        &lt;tr>: Represents a table row in the footer.<br>
+        &lt;td>: Defines cells in the footer.<br>
+        <br>
+        This example creates a table with headers, body content, and a footer, demonstrating the use of the specified HTML table elements.
     </p>
+
+    <p>The code-box shows you how it's done.</p>
+
+    <div class="code-box">
+        <p>
+            &lt;table&gt;<br>
+            &lt;thead&gt;<br>
+            &lt;tr&gt;<br>
+            &lt;th&gt;Header 1&lt;/th&gt;<br>
+            &lt;th&gt;Header 2&lt;/th&gt;<br>
+            &lt;/tr&gt;<br>
+            &lt;/thead&gt;<br>
+            &lt;tbody&gt;<br>
+            &lt;tr&gt;<br>
+            &lt;td&gt;Data 1,1&lt;/td&gt;<br>
+            &lt;td&gt;Data 1,2&lt;/td&gt;<br>
+            &lt;/tr&gt;<br>
+            &lt;tr&gt;<br>
+            &lt;td&gt;Data 2,1&lt;/td&gt;<br>
+            &lt;td&gt;Data 2,2&lt;/td&gt;<br>
+            &lt;/tr&gt;<br>
+            &lt;/tbody&gt;<br>
+            &lt;tfoot&gt;<br>
+            &lt;tr&gt;<br>
+            &lt;td&gt;Footer 1&lt;/td&gt;<br>
+            &lt;td&gt;Footer 2&lt;/td&gt;<br>
+            &lt;/tr&gt;<br>
+            &lt;/tfoot&gt;<br>
+            &lt;/table&gt;<br>
+        </p>
+    </div>
 </body>
 </html>
