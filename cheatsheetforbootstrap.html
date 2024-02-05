@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles.css">
 
     <title>Cheat-Sheet for CSS</title>
+
+
 </head>
 <body>
 
@@ -13,6 +18,11 @@
         <ul>
             <li><button class="home" onclick="window.location.href = 'index.html'"><img class="home-button" src="yamaha.jpg" alt="Homepage"></button></li>
             <li><button onclick="window.location.href = '#linking'">Linking</button></li>
+            <li><button onclick="window.location.href = '#text'">Text</button></li>
+            <li><button onclick="window.location.href = '#lists'">Lists</button></li>
+            <li><button onclick="window.location.href = '#contextual'">Contextual Colors</button></li>
+            <li><button onclick="window.location.href = '#buttons'">Buttons</button></li>
+            <li><button onclick="window.location.href = '#tables'">Tables</button></li>
         </ul>
     </nav>
 </div>
@@ -30,6 +40,388 @@
     </p>
 </div>
 
+<h2 id="text">Text</h2>
+
+<h3>Alignment</h3>
+
+<p>You can either align the text in the center, left, right justify. You use it through the classes which are shown in the code box below.</p>
+
+<p class="text-center">This text is aligned to the center.</p>
+<p class="text-left">This text is aligned to the left.</p>
+<p class="text-right">This text is aligned to the right.</p>
+<p class="text-justify">This text is justified, meaning it is spaced out to fill the width of the container.</p>
+
+<div class="code-box">
+    <p>
+        &lt;p class="text-center">This text is aligned to the center.&lt;/p><br>
+        &lt;p class="text-left">This text is aligned to the left.&lt;/p><br>
+        &lt;p class="text-right">This text is aligned to the right.&lt;/p><br>
+        &lt;p class="text-justify">This text is justified, meaning it is spaced out to fill the width of the container.&lt;/p><br>
+    </p>
+</div>
+
+<h3>Transformation</h3>
+
+<p class="text-uppercase">This text is transformed to uppercase.</p>
+<p class="text-lowercase">This text is transformed to lowercase.</p>
+<p class="text-capitalize">This text is transformed to capitalize the first letter of each word.</p>
+<br>
+<p>You can see how it works in the code-box below.</p>
+
+<div class="code-box">
+    <p>
+        &lt;p class="text-uppercase">This text is transformed to uppercase.&lt;/p><br>
+        &lt;p class="text-lowercase">This text is transformed to lowercase.&lt;/p><br>
+        &lt;p class="text-capitalize">This text is transformed to capitalize the first letter of each word.&lt;/p><br>
+    </p>
+</div>
+
+<h2 id="lists">Lists</h2>
+
+<h3>Basic Lists</h3>
+
+<p>Bootstrap provides a basic styling for unordered (&lt;ul>) and ordered (&lt;ol>) lists.</p>
+
+<ul class="list-group">
+    <li class="list-group-item">Item 1</li>
+    <li class="list-group-item">Item 2</li>
+    <li class="list-group-item">Item 3</li>
+</ul>
+
+<div class="code-box">
+    <p>
+    &lt;ul class="list-group"><br>
+        &lt;li class="list-group-item">Item 1&lt;/li><br>
+        &lt;li class="list-group-item">Item 2&lt;/li><br>
+        &lt;li class="list-group-item">Item 3&lt;/li><br>
+    &lt;/ul><br>
+    </p>
+</div>
+
+<h3>Inline Lists</h3>
+
+<p>Display list items horizontally using the list-inline class.</p>
+
+<ul class="list-inline">
+    <li class="list-inline-item">Item 1</li>
+    <li class="list-inline-item">Item 2</li>
+    <li class="list-inline-item">Item 3</li>
+</ul>
+
+<div class="code-box">
+    <p>
+        &lt;ul class="list-inline"><br>
+        &lt;li class="list-inline-item">Item 1&lt;/li><br>
+        &lt;li class="list-inline-item">Item 2&lt;/li><br>
+        &lt;li class="list-inline-item">Item 3&lt;/li><br>
+        &lt;/ul><br>
+    </p>
+</div>
+
+<h3>List Groups</h3>
+
+<p>Use the list-group class to create a list group, useful for displaying a list of content blocks. Each list item has is own action when clicked. In this case going to the top of the page.</p>
+
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">Item 1</a>
+    <a href="#" class="list-group-item list-group-item-action">Item 2</a>
+    <a href="#" class="list-group-item list-group-item-action">Item 3</a>
+</div>
+
+<div class="code-box">
+    <p>
+        &lt;div class="list-group"><br>
+        &lt;a href="#" class="list-group-item list-group-item-action">Item 1&lt;/a><br>
+        &lt;a href="#" class="list-group-item list-group-item-action">Item 2&lt;/a><br>
+        &lt;a href="#" class="list-group-item list-group-item-action">Item 3&lt;/a><br>
+        &lt;/div><br>
+    </p>
+</div>
+
+<h2 id="contextual">Contextual Colors</h2>
+
+<p>Contextual colors are used to give texts, headings etc. a simple look that the user instantly knows what it is. For example a warning.</p>
+
+<!-- Text Colors Example -->
+<h2 class="text-primary">Primary Heading</h2>
+<p class="text-danger">This is a danger text.</p>
+<span class="text-success">This is a success text.</span>
+
+<!-- Background Colors Example -->
+<div class="bg-info text-white p-3 mt-3">This has an info background color.</div>
+<div class="bg-warning text-dark p-3 mt-3">This has a warning background color.</div>
+
+<!-- List Group Example -->
+<ul class="list-group mt-3">
+    <li class="list-group-item">List item 1</li>
+    <li class="list-group-item list-group-item-primary">List item 2 (Primary)</li>
+    <li class="list-group-item list-group-item-success">List item 3 (Success)</li>
+</ul>
+
+<!-- Badge Example -->
+<span class="badge badge-primary">New</span>
+<span class="badge badge-danger">Alert</span>
+<span class="badge badge-success">Success</span>
+
+<div class="code-box">
+    <p>
+        &lt;!-- Text Colors Example --&gt;<br>
+        &lt;h2 class="text-primary"&gt;Primary Heading&lt;/h2&gt;<br>
+        &lt;p class="text-danger"&gt;This is a danger text.&lt;/p&gt;<br>
+        &lt;span class="text-success"&gt;This is a success text.&lt;/span&gt;<br>
+
+        &lt;!-- Background Colors Example --&gt;<br>
+        &lt;div class="bg-info text-white p-3 mt-3"&gt;This has an info background color.&lt;/div&gt;<br>
+        &lt;div class="bg-warning text-dark p-3 mt-3"&gt;This has a warning background color.&lt;/div&gt;<br>
+
+        &lt;!-- List Group Example --&gt;<br>
+        &lt;ul class="list-group mt-3"&gt;<br>
+        &lt;li class="list-group-item"&gt;List item 1&lt;/li&gt;<br>
+        &lt;li class="list-group-item list-group-item-primary"&gt;List item 2 (Primary)&lt;/li&gt;<br>
+        &lt;li class="list-group-item list-group-item-success"&gt;List item 3 (Success)&lt;/li&gt;<br>
+        &lt;/ul&gt;<br>
+
+        &lt;!-- Badge Example --&gt;<br>
+        &lt;span class="badge badge-primary"&gt;New&lt;/span&gt;<br>
+        &lt;span class="badge badge-danger"&gt;Alert&lt;/span&gt;<br>
+        &lt;span class="badge badge-success"&gt;Success&lt;/span&gt;<br>
+    </p>
+</div>
+
+<h2 id="buttons">Buttons</h2>
+
+<p>You can create a basic button using the btn class.</p>
+
+<button type="button" class="btn btn-primary">Primary Button</button>
+
+<div class="code-box">
+    <p>
+        &lt;button type="button" class="btn btn-primary">Primary Button&lt;/button>
+    </p>
+</div>
+
+<p>You can style these buttons using Contextual Button Styles. Apply contextual styles to buttons, such as btn-primary, btn-secondary, btn-success, btn-danger, btn-warning, btn-info, etc.</p>
+
+<button type="button" class="btn btn-success">Success Button</button>
+<button type="button" class="btn btn-danger">Danger Button</button>
+
+<div class="code-box">
+    <p>
+        &lt;button type="button" class="btn btn-success">Success Button&lt;/button><br>
+        &lt;button type="button" class="btn btn-danger">Danger Button&lt;/button><br>
+    </p>
+</div>
+
+<p>Adjust the size of buttons using btn-lg (large), btn-sm (small), or btn-xs (extra small).</p>
+
+<button type="button" class="btn btn-primary btn-lg">Large Button</button>
+<button type="button" class="btn btn-secondary btn-sm">Small Button</button>
+
+<div class="code-box">
+    <p>
+        &lt;button type="button" class="btn btn-primary btn-lg">Large Button&lt;/button><br>
+        &lt;button type="button" class="btn btn-secondary btn-sm">Small Button&lt;/button><br>
+    </p>
+</div>
+
+<h2 id="tables">Tables</h2>
+
+<ul>
+    <li>
+        <strong>Basic Table:</strong>
+        <p>Creates a basic table with default styling.</p>
+        <p>&lt;table class="table"&gt;</p>
+    </li>
+
+    <li>
+        <strong>Striped Rows:</strong>
+        <p>Alternates row background colors for better readability.</p>
+        <p>&lt;table class="table table-striped"&gt;</p>
+    </li>
+
+    <li>
+        <strong>Bordered Table:</strong>
+        <p>Adds borders to the table and its cells.</p>
+        <p>&lt;table class="table table-bordered"&gt;</p>
+    </li>
+
+    <li>
+        <strong>Hover Rows:</strong>
+        <p>Applies a hover effect to highlight rows when hovered.</p>
+        <p>&lt;table class="table table-hover"&gt;</p>
+    </li>
+
+    <li>
+        <strong>Responsive Table:</strong>
+        <p>Ensures the table is horizontally scrollable on smaller screens.</p>
+        <p>&lt;div class="table-responsive"&gt;</p>
+    </li>
+
+    <li>
+        <strong>Contextual Classes:</strong>
+        <p>Apply contextual classes to rows or cells for different styles.</p>
+        <p>&lt;tr class="table-primary"&gt;</p>
+    </li>
+
+    <li>
+        <strong>Head Dark/Light:</strong>
+        <p>Sets the background color of the table header.</p>
+        <p>&lt;thead class="thead-dark"&gt; or &lt;thead class="thead-light"&gt;</p>
+    </li>
+</ul>
+
+<dl>
+    <dt class="col-sm-3">Basic Table:</dt>
+    <dd class="col-sm-9">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Username</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td>@john.doe</td>
+            </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt class="col-sm-3">Striped Rows:</dt>
+    <dd class="col-sm-9">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Username</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td>@john.doe</td>
+            </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt class="col-sm-3">Bordered Table:</dt>
+    <dd class="col-sm-9">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Username</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td>@john.doe</td>
+            </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt class="col-sm-3">Hover Rows:</dt>
+    <dd class="col-sm-9">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Username</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td>@john.doe</td>
+            </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt class="col-sm-3">Responsive Table:</dt>
+    <dd class="col-sm-9">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Username</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>@john.doe</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </dd>
+
+    <dt class="col-sm-3">Contextual Classes:</dt>
+    <dd class="col-sm-9">
+        <table class="table">
+            <tbody>
+            <tr class="table-warning">
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Username</th>
+            </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt class="col-sm-3">Head Dark/Light:</dt>
+    <dd class="col-sm-9">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Username</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-primary">
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Username</th>
+            </tr>
+            </tbody>
+        </table>
+    </dd>
+</dl>
+
+<h2>For more infos click this link:</h2>
+<a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">More Infos</a>
 
 </body>
 </html>
