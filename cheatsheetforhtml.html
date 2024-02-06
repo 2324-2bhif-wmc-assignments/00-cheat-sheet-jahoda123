@@ -19,6 +19,8 @@
             <li><button onclick="window.location.href = '#images'">Images</button></li>
             <li><button onclick="window.location.href = '#head-elements'">Head Elements</button></li>
             <li><button onclick="window.location.href = '#lists-and-tables'">Lists and Tables</button></li>
+            <li><button onclick="window.location.href = '#flexbox'">Flexbox</button></li>
+            <li><button onclick="window.location.href = '#grid'">Grid</button></li>
         </ul>
     </nav>
     </div>
@@ -375,6 +377,81 @@
             &lt;/tr&gt;<br>
             &lt;/tfoot&gt;<br>
             &lt;/table&gt;<br>
+        </p>
+    </div>
+
+    <h2 id="flexbox">Flexbox</h2>
+
+    <p>Flexbox is a technique that allows you to flexibly position elements within a container element. Here are some basic concepts:</p>
+
+    <ul>
+        <li><p><strong>Container and Items:</strong> You define a container element that holds the Flexbox properties. The elements contained within it are referred to as flex items.</p></li>
+        <li><p><strong>Main Axis and Cross Axis:</strong> Flexbox operates with a main axis and a cross axis. By default, the main axis is horizontal but can be changed with CSS properties.</p></li>
+        <li><p><strong>Flex Container Properties:</strong> There are various CSS properties that can be applied to the container, such as display: flex; to make it a flex container.</p></li>
+    </ul>
+
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+
+    <div class="code-box">
+        <p>
+        &lt;div class="flex-container"><br>
+            &lt;div class="flex-item">1&lt;/div><br>
+        &lt;div class="flex-item">2&lt;/div><br>
+        &lt;div class="flex-item">3&lt;/div><br>
+        &lt;/div><br>
+        </p>
+    </div>
+
+    <div class="code-box">
+        <p>
+            .flex-container {<br>
+            display: flex;<br>
+            }<br>
+            <br>
+            .flex-item {<br>
+            flex: 1;<br>
+            /* Flex-Grow, Flex-Shrink, Flex-Basis */<br>
+            }<br>
+        </p>
+    </div>
+
+    <h2 id="grid">Grid</h2>
+
+    <p>Grid allows you to create a two-dimensional grid layout consisting of rows and columns. Here are some key points:</p>
+
+    <ul>
+        <li><p><strong>Grid Container and Items:</strong> An element becomes a grid container by assigning it the property display: grid;. The elements contained within it are treated as grid items.</p></li>
+        <li><p><strong>Grid Rows and Columns:</strong> You can define the number of rows and columns in the grid as well as their sizes and gaps.</p></li>
+        <li><p><strong>Placement of Items:</strong> Using CSS rules, you can control the placement of items within the grid by specifying their positions in terms of rows and columns.</p></li>
+    </ul>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+    </div>
+
+    <div class="code-box">
+        <p>
+            &lt;div class="grid-container"><br>
+            &lt;div class="grid-item">1&lt;/div><br>
+            &lt;div class="grid-item">2&lt;/div><br>
+            &lt;div class="grid-item">3&lt;/div><br>
+            &lt;/div><br>
+        </p>
+    </div>
+
+    <div class="code-box">
+        <p>
+            .grid-container {<br>
+            display: grid;<br>
+            grid-template-columns: auto auto auto; /* Three columns */<br>
+            grid-gap: 2rem; /* Gap between items */<br>
+            }<br>
         </p>
     </div>
 </body>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav><button onclick="window.location.href = 'animation.html'">Back</button></nav>
+
+<h1>Animations</h1>
+
+<hr>
+
+<p>In this example, we're creating a CSS animation named wanderingMotion that simulates the movement of an element wandering around the screen. Let's break down how this animation works:</p>
+
+<ol>
+    <li>
+        <p>The <strong>@keyframes</strong> rule defines the animation's keyframes, which are the stages of the animation's timeline. Each keyframe specifies how the element should appear at a certain point in time during the animation.</p>
+
+        <ul>
+            <li>0%: At the start of the animation (0% of the animation duration), the element is translated to its initial position (0, 0).</li>
+            <li>12.5%, 25%, 37.5%: These keyframes define intermediate positions where the element is translated to different coordinates on the screen.</li>
+            <li>50%: Halfway through the animation, the element returns to its original position (0, 0).</li>
+            <li>62.5%, 75%, 87.5%: These keyframes define intermediate positions where the element is translated to different coordinates on the screen in the opposite direction.</li>
+            <li>100%: At the end of the animation (100% of the animation duration), the element returns to its initial position (0, 0).</li>
+        </ul>
+    </li>
+
+    <li>
+        <p>The animation wanderingMotion is applied to the button with the class wandering-button.</p>
+
+        <ul>
+            <li>.wandering-button: This class styles the button element and positions it absolutely at the center of the screen (top: 50%; left: 50%;). The button will be displayed at the center of the screen regardless of the viewport size.</li>
+            <li>animation: wanderingMotion 10s linear infinite;: This line specifies the animation to apply (wanderingMotion), sets the animation duration to 10s (10 seconds), specifies the timing function (linear, meaning the animation progresses at a constant speed), and sets the animation iteration count to infinite (the animation repeats indefinitely).</li>
+        </ul>
+    </li>
+    <li>
+        <p>The button is wrapped inside an anchor (&lt;a>) tag with the href attribute pointing to animationexplanation.html. This makes the button clickable and redirects the user to the animationexplanation.html page when clicked.</p>
+    </li>
+</ol>
+
+<h3>HTML-Code</h3>
+
+<div class="code-box">
+    <p>
+        &lt;a href="animationexplanation.html"><br>
+        &lt;button class="wandering-button">Click Me&lt;/button><br>
+        &lt;/a>
+    </p>
+</div>
+
+<h3>CSS-Code</h3>
+
+<div class="code-box">
+    <p>
+        @keyframes wanderingMotion {<br>
+        0% {<br>
+        transform: translate(0, 0);<br>
+        }<br>
+        12.5% {<br>
+        transform: translate(10rem, 10rem);<br>
+        }<br>
+        25% {<br>
+        transform: translate(15rem, 17rem);<br>
+        }<br>
+        37.5% {<br>
+        transform: translate(40rem, 30rem);<br>
+        }<br>
+        50% {<br>
+        transform: translate(0, 0);<br>
+        }<br>
+        62.5% {<br>
+        transform: translate(-10rem, -10rem);<br>
+        }<br>
+        75% {<br>
+        transform: translate(-15rem, -17rem);<br>
+        }<br>
+        87.5% {<br>
+        transform: translate(-40rem, -30rem);<br>
+        }<br>
+        100% {<br>
+        transform: translate(0, 0);<br>
+        }<br>
+        }<br><br>
+        .wandering-button {<br>
+        position: absolute;<br>
+        top: 50%;<br>
+        left: 50%;<br>
+        animation: wanderingMotion 30s linear infinite;<br>
+        }
+    </p>
+</div>
+</body>
+</html>
