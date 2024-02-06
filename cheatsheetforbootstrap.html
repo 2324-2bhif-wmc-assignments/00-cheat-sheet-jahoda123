@@ -5,57 +5,78 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="./styles.css">
-
-    <title>Cheat-Sheet for CSS</title>
+    <title>Cheat-Sheet for Bootstrap</title>
 
 
 </head>
 <body>
 
-<div class="menu-container">
-    <nav>
-        <ul>
-            <li><button class="home" onclick="window.location.href = 'index.html'"><img class="home-button" src="yamaha.jpg" alt="Homepage"></button></li>
-            <li><button onclick="window.location.href = '#linking'">Linking</button></li>
-            <li><button onclick="window.location.href = '#text'">Text</button></li>
-            <li><button onclick="window.location.href = '#lists'">Lists</button></li>
-            <li><button onclick="window.location.href = '#contextual'">Contextual Colors</button></li>
-            <li><button onclick="window.location.href = '#buttons'">Buttons</button></li>
-            <li><button onclick="window.location.href = '#tables'">Tables</button></li>
-        </ul>
+<div class="container-fluid bg-black text-white rounded px-3">
+
+<div class="container bg-light rounded fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="yamaha.jpg" alt="Homepage" width="30" height="30" class="d-inline-block align-top" loading="lazy">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#linking">Linking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#text">Text</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#lists">Lists</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contextual">Contextual Colors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buttons">Buttons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tables">Tables</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </div>
 
-<h1>Cheat-Sheet for Bootstrap</h1>
+<hr>
+<h1 class="mt-5">Cheat-Sheet for Bootstrap</h1>
 <hr>
 
-<h2 id="linking">How to link bootstrap in  your Website</h2>
+<h2 class="text-primary" id="linking">How to link bootstrap in your Website</h2>
 
 <p>If you want to use Bootstrap you have to link it via this link in your header.</p>
 
-<div class="code-box">
+<div class="code-box bg-light p-3 rounded text-black">
     <p>
         &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     </p>
 </div>
 
-<h2 id="text">Text</h2>
+<h2  class="text-primary" id="text">Text</h2>
 
 <h3>Alignment</h3>
 
 <p>You can either align the text in the center, left, right justify. You use it through the classes which are shown in the code box below.</p>
 
 <p class="text-center">This text is aligned to the center.</p>
-<p class="text-left">This text is aligned to the left.</p>
-<p class="text-right">This text is aligned to the right.</p>
+<p class="text-start">This text is aligned to the left.</p>
+<p class="text-end">This text is aligned to the right.</p>
 <p class="text-justify">This text is justified, meaning it is spaced out to fill the width of the container.</p>
 
-<div class="code-box">
+<div class="code-box bg-light p-3 rounded text-black">
     <p>
         &lt;p class="text-center">This text is aligned to the center.&lt;/p><br>
-        &lt;p class="text-left">This text is aligned to the left.&lt;/p><br>
-        &lt;p class="text-right">This text is aligned to the right.&lt;/p><br>
+        &lt;p class="text-start">This text is aligned to the left.&lt;/p><br>
+        &lt;p class="text-end">This text is aligned to the right.&lt;/p><br>
         &lt;p class="text-justify">This text is justified, meaning it is spaced out to fill the width of the container.&lt;/p><br>
     </p>
 </div>
@@ -68,7 +89,7 @@
 <br>
 <p>You can see how it works in the code-box below.</p>
 
-<div class="code-box">
+<div class="code-box bg-light p-3 rounded text-black">
     <p>
         &lt;p class="text-uppercase">This text is transformed to uppercase.&lt;/p><br>
         &lt;p class="text-lowercase">This text is transformed to lowercase.&lt;/p><br>
@@ -76,7 +97,7 @@
     </p>
 </div>
 
-<h2 id="lists">Lists</h2>
+<h2 class="text-primary" id="lists">Lists</h2>
 
 <h3>Basic Lists</h3>
 
@@ -88,13 +109,13 @@
     <li class="list-group-item">Item 3</li>
 </ul>
 
-<div class="code-box">
+<div class="code-box bg-light p-3 rounded text-black">
     <p>
-    &lt;ul class="list-group"><br>
+        &lt;ul class="list-group"><br>
         &lt;li class="list-group-item">Item 1&lt;/li><br>
         &lt;li class="list-group-item">Item 2&lt;/li><br>
         &lt;li class="list-group-item">Item 3&lt;/li><br>
-    &lt;/ul><br>
+        &lt;/ul><br>
     </p>
 </div>
 
@@ -108,7 +129,7 @@
     <li class="list-inline-item">Item 3</li>
 </ul>
 
-<div class="code-box">
+<div class="code-box bg-light p-3 rounded text-black">
     <p>
         &lt;ul class="list-inline"><br>
         &lt;li class="list-inline-item">Item 1&lt;/li><br>
@@ -128,7 +149,7 @@
     <a href="#" class="list-group-item list-group-item-action">Item 3</a>
 </div>
 
-<div class="code-box">
+<div class="code-box bg-light p-3 rounded text-black">
     <p>
         &lt;div class="list-group"><br>
         &lt;a href="#" class="list-group-item list-group-item-action">Item 1&lt;/a><br>
@@ -138,7 +159,7 @@
     </p>
 </div>
 
-<h2 id="contextual">Contextual Colors</h2>
+<h2 class="text-primary" id="contextual">Contextual Colors</h2>
 
 <p>Contextual colors are used to give texts, headings etc. a simple look that the user instantly knows what it is. For example a warning.</p>
 
@@ -159,11 +180,11 @@
 </ul>
 
 <!-- Badge Example -->
-<span class="badge badge-primary">New</span>
-<span class="badge badge-danger">Alert</span>
-<span class="badge badge-success">Success</span>
+<span class="badge bg-primary">New</span>
+<span class="badge bg-danger">Alert</span>
+<span class="badge bg-success">Success</span>
 
-<div class="code-box">
+<div class="code-box bg-light p-3 rounded text-black">
     <p>
         &lt;!-- Text Colors Example --&gt;<br>
         &lt;h2 class="text-primary"&gt;Primary Heading&lt;/h2&gt;<br>
@@ -182,19 +203,19 @@
         &lt;/ul&gt;<br>
 
         &lt;!-- Badge Example --&gt;<br>
-        &lt;span class="badge badge-primary"&gt;New&lt;/span&gt;<br>
-        &lt;span class="badge badge-danger"&gt;Alert&lt;/span&gt;<br>
-        &lt;span class="badge badge-success"&gt;Success&lt;/span&gt;<br>
+        &lt;span class="badge bg-primary"&gt;New&lt;/span&gt;<br>
+        &lt;span class="badge bg-danger"&gt;Alert&lt;/span&gt;<br>
+        &lt;span class="badge bg-success"&gt;Success&lt;/span&gt;<br>
     </p>
 </div>
 
-<h2 id="buttons">Buttons</h2>
+<h2 class="text-primary" id="buttons">Buttons</h2>
 
 <p>You can create a basic button using the btn class.</p>
 
 <button type="button" class="btn btn-primary">Primary Button</button>
 
-<div class="code-box">
+<div class="code-box bg-light p-3 rounded text-black">
     <p>
         &lt;button type="button" class="btn btn-primary">Primary Button&lt;/button>
     </p>
@@ -205,7 +226,7 @@
 <button type="button" class="btn btn-success">Success Button</button>
 <button type="button" class="btn btn-danger">Danger Button</button>
 
-<div class="code-box">
+<div class="code-box bg-light p-3 rounded text-black">
     <p>
         &lt;button type="button" class="btn btn-success">Success Button&lt;/button><br>
         &lt;button type="button" class="btn btn-danger">Danger Button&lt;/button><br>
@@ -217,14 +238,14 @@
 <button type="button" class="btn btn-primary btn-lg">Large Button</button>
 <button type="button" class="btn btn-secondary btn-sm">Small Button</button>
 
-<div class="code-box">
+<div class="code-box bg-light p-3 rounded text-black">
     <p>
         &lt;button type="button" class="btn btn-primary btn-lg">Large Button&lt;/button><br>
         &lt;button type="button" class="btn btn-secondary btn-sm">Small Button&lt;/button><br>
     </p>
 </div>
 
-<h2 id="tables">Tables</h2>
+<h2 class="text-primary" id="tables">Tables</h2>
 
 <ul>
     <li>
@@ -266,7 +287,7 @@
     <li>
         <strong>Head Dark/Light:</strong>
         <p>Sets the background color of the table header.</p>
-        <p>&lt;thead class="thead-dark"&gt; or &lt;thead class="thead-light"&gt;</p>
+        <p>&lt;thead class="table-dark"&gt; or &lt;thead class="table-light"&gt;</p>
     </li>
 </ul>
 
@@ -400,7 +421,7 @@
     <dt class="col-sm-3">Head Dark/Light:</dt>
     <dd class="col-sm-9">
         <table class="table">
-            <thead class="thead-dark">
+            <thead class="table-dark">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">First Name</th>
@@ -420,8 +441,10 @@
     </dd>
 </dl>
 
-<h2>For more infos click this link:</h2>
-<a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">More Infos</a>
+<h2 class="text-primary" >For more info click this link:</h2>
+<a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">More Info</a>
+
+</div>
 
 </body>
 </html>
